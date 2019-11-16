@@ -3,11 +3,12 @@
 #include <QDir>
 #include <QUuid>
 
+#include "AppCore"
 #include "GuiAppCore"
 #include "FileSys"
 #include "core.h"
 //==================================================================================================
-using namespace nayk;
+using namespace file_sys;
 
 //==================================================================================================
 Core::Core(QObject *parent) : QObject(parent)
@@ -18,12 +19,12 @@ Core::Core(QObject *parent) : QObject(parent)
 //==================================================================================================
 QString Core::applicationVersion()
 {
-    return AppCore::applicationVersion();
+    return app_core::applicationVersion();
 }
 //==================================================================================================
 QString Core::applicationBuildDate()
 {
-    return AppCore::applicationBuildDate();
+    return app_core::applicationBuildDate();
 }
 //==================================================================================================
 QString Core::applicationTitle()
@@ -93,8 +94,8 @@ void Core::setValue(const QString &key, const QString &value)
 //==================================================================================================
 void Core::initSettingsDirectory()
 {
-    m_settingsDirName = GuiAppCore::applicationProfilePath();
-    FileSys::makePath( m_settingsDirName );
+    m_settingsDirName = app_core::applicationProfilePath();
+    makePath( m_settingsDirName );
 }
 //==================================================================================================
 void Core::loadMainSettings()

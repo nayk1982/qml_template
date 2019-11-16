@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
     QGuiApplication app(argc, argv);
-    if(!nayk::GuiAppCore::initApplication(
+    if(!gui_app_core::initializeApplication(
                 "Qml Template",
                 "Qml Template",
                 "nayk",
