@@ -9,10 +9,10 @@ include( $${PWD}/../../_nayk/qml_app.pri )
 # Sources and Headers ==========================================================
 
 INCLUDEPATH += \
-    $${PWD}/include \
+    $${PWD}/include
 
 SOURCES += \
-    $${PWD}/include/core.cpp \
+    $${PWD}/src/core.cpp \
     main.cpp
 
 HEADERS += \
@@ -40,7 +40,7 @@ QML_DESIGNER_IMPORT_PATH += \
 
 CONFIG(release, debug|release) {
     win32: DESTDIR = $${PWD}/../_distrib/win_$${QMAKE_HOST.arch}
-    else: unix:!android: DESTDIR  = $${PWD}/../_distrib/linux_$${QMAKE_HOST.arch}
+    else: unix:!android: DESTDIR  = $${PWD}/../_distrib/linux_$${QMAKE_HOST.arch}/bin
 }
 
 # translations =================================================================
