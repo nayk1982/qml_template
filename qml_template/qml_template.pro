@@ -38,15 +38,15 @@ QML_IMPORT_PATH += \
 QML_DESIGNER_IMPORT_PATH += \
     $${PWD}/qml/
 
-# Output dir ===================================================================
-
-CONFIG(release, debug|release) {
-    win32: DESTDIR = $${PWD}/../_distrib/win_$${QMAKE_HOST.arch}
-    else: unix:!android: DESTDIR  = $${PWD}/../_distrib/linux_$${QMAKE_HOST.arch}/bin
-}
-
 # translations =================================================================
-#TRANSLATIONS += $${PWD}/translations/main_ru.ts
+
+#TRANSLATIONS += \
+#    $${PWD}/translations/main_ru.ts
+#
 #main_tr.commands = lrelease $${PWD}/translations/main_ru.ts -qm $${PWD}/translations/main_ru.qm
-#PRE_TARGETDEPS += main_tr
-#QMAKE_EXTRA_TARGETS += main_tr
+#
+#PRE_TARGETDEPS += \
+#    main_tr
+#
+#QMAKE_EXTRA_TARGETS += \
+#    main_tr
