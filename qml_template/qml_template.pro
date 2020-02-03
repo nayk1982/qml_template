@@ -6,6 +6,8 @@
 
 QT += quick quickcontrols2
 
+VERSION = 1.0
+
 include( $${PWD}/../../_nayk/nayk.pri )
 
 # Sources and Headers ==========================================================
